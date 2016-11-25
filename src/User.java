@@ -33,28 +33,24 @@ public class User {
         this.password = password;
     }
 
-    public boolean checkUsername(){
+    public boolean checkUsername() {
         //判断username是否存在
         return true;
     }
 
-    public boolean checkPassword(String username, String password){
+    public boolean checkPassword(String username, String password) {
         //判断用户登录密码是否正确
-
         return true;
     }
 
-    public int checkLogin(){
-        if(checkUsername()){
-            if(checkPassword(this.username, this.password)){
-                   return LOGINSUCCESS;
-            }
-            else{
+    public int checkLogin() {
+        if (checkUsername()) {
+            if (checkPassword(this.username, this.password)) {
+                return LOGINSUCCESS;
+            } else {
                 return WRONGPWD;
             }
         }
         return NOUSERNAME;
     }
-
-
 }
