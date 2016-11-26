@@ -9,6 +9,12 @@ import java.sql.SQLException;
  * Created by Administrator on 2016/11/26.
  */
 public interface UserDao {
+    /**
+     * User表操作接口
+     * @param connection
+     * @param user
+     * @throws SQLException
+     */
     public void save(Connection connection, User user) throws SQLException;
     public void update(Connection connection, Long id, User user) throws SQLException;
     public void delete(Connection connection, User user) throws SQLException;
