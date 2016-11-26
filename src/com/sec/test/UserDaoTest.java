@@ -24,10 +24,11 @@ public class UserDaoTest {
 //            qxw.setWorkId(10433234);
 //            qxw.setId(5);
 //            userDao.delete(conn, qxw);
-            userDao.selectAll(conn);
-
+            int bo = userDao.checkLogin(conn, "王志鹏1", "123456");
+            System.out.println(bo);
             conn.commit();
-        }catch(Exception e){
+        } catch (Exception e) {
+            e.printStackTrace();
             try {
                 conn.rollback();
                 System.out.println("==========插入失败==========");

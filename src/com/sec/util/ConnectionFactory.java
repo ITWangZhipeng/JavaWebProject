@@ -13,9 +13,7 @@ public class ConnectionFactory {
     private static String dburl;
     private static String user;
     private static String password;
-
     private static final ConnectionFactory factory = new ConnectionFactory();
-    private Connection connection;
 
     static {
         Properties prop = new Properties();
@@ -37,6 +35,8 @@ public class ConnectionFactory {
     private ConnectionFactory() {
 
     }
+
+    private Connection connection;
 
     public static ConnectionFactory getInstance() {
         return factory;

@@ -7,7 +7,7 @@ public class User extends IdEntity {
     private String username;
     private String password;
     private int WorkId;
-  
+
     public void setUsername(String username) {
         this.username = username;
     }

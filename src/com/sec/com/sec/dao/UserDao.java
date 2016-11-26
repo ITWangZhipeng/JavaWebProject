@@ -13,4 +13,5 @@ public interface UserDao {
     public void update(Connection connection, Long id, User user) throws SQLException;
     public void delete(Connection connection, User user) throws SQLException;
     public void selectAll(Connection connection) throws SQLException;
+    public int checkLogin(Connection connection, String username, String password) throws SQLException;
 }
